@@ -1,0 +1,47 @@
+# GOING A STEP FORWARD WITH THIS MODEL 
+
+# Compare with Ridge/Lasso (to reduce overfitting)
+# we will now enter the world of regularization- an essential concept in machine learning where highly correlated financial features such as 
+# moving averages and lagged prices are involved. 
+# The Ridge/Lasso Regression is used to prevent overfitting, handle multicollinearity and improve model generalization on unseen data. 
+# They are able to do so by adding a penalty term to the linear regression cost function. 
+
+#1. Lasso Regression (L1 Reguliarization)
+# a. Adds penalty on absolute values of coefficients
+# b. Can shrink some coefficients to 0 — i.e., automatic feature selection
+# c. Helps simplify the model
+# Pro: Best when you want to remove weak predictors
+# Con: May discard important features if λ is too high
+
+from sklearn.linear_model import Lasso
+from sklearn.metrics import mean_squared_error, r2_score
+lasso = Lasso(alpha = 0.1)
+lasso.fit(X_train, y_train)
+y_pred = lasso.predict(X_test)
+
+print ('Lasso RMSE:', mean_squared_error(y_test, y_pred, squared=False))
+print('Lasso R²:', r2_score(y_test, y_pred))
+
+
+
+#2. Ridge Regression (L2 Regularization)
+# a. Adds penalty on squared coefficients
+# b. Prevents any feature from dominating
+# c. Keeps all features but shrinks them
+# Pro: Best when many features are mildly relevant
+# Con: works great for time series & financial data
+
+X_train, X_test, y_train, y_test
+from sklearn.linear_model import Ridge
+from sklearn.metrics import mean_squared_error, r2_score
+ridge = Ridge(alpha = 0.1)
+ridge.fit(X_train, y_train)
+y_pred = ridge.predict(X_test)
+
+print ('Ridge RMSE:', mean_squared_error(y_test, y_pred, squared=False))
+print('Ridge R²:', r2_score(y_test, y_pred))
+
+# Best use case scenarios of the given regression models: 
+# Avoid overfitting in time-series : Ridge
+# Select most important features   : Lasso
+# Balance both                     : ElasticNet
