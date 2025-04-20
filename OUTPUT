@@ -1,4 +1,17 @@
+# 
 RMSE: 0.9852435371789068
 R² score: 0.9987774257100636
 
 [Visulization i.e., the graph is provided in png format in the main branch]
+
+
+
+Lasso RMSE: 1.838151059730129
+Lasso R²: 0.9957445015732902
+
+Ridge RMSE: 0.9852177354413124
+Ridge R²: 0.9987774898352811
+
+
+
+
