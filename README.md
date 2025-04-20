@@ -15,6 +15,7 @@ d. Regression evaluation: Helps quantify model reliability
 Furthermore, I calculated thr RMSE (Root-Mean-Squared Error) to measure the average distance between the predicted price and the actual value and the R² Score (Coefficient of Determination) to measure how well the variance in the data is explained by the model. 
 
 Using the model in this project and the stock, I achieved the following values:
+
 RMSE: 0.9852435371789068
 
 R² score: 0.9987774257100636
