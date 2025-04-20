@@ -16,6 +16,7 @@ Furthermore, I calculated thr RMSE (Root-Mean-Squared Error) to measure the aver
 
 Using the model in this project and the stock, I achieved the following values:
 RMSE: 0.9852435371789068
+
 R² score: 0.9987774257100636
 
 In an efficient model, low RMSE means that the predictions deivating less from actual stock price. In this case, the RMSE is 0.985 which shows less than < 0.5% error, which implies that the predictions are less than $1 off. R² Score in the model is 0.9988, it means that the model explains 99.88% of the variance in stock prices. It furhter implies that the model almost entirely captures the underlying structure of the data.
